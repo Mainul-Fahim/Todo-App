@@ -42,15 +42,29 @@ Before you begin, ensure you have met the following requirements:
    git clone <repository-url>
    cd backend
    
-2. 
- ```bash
-  npm install
+2. Install all the dependencies
+ - npm install
 
-3. create env file
+3. Create env file
 
-```bash
-  Inside env file, write port
+ - Create a .env file and configure your environment variables (e.g., PORT).
 
-5.
- ```bash
-npm run start:dev
+5. Start the server
+- npm run start:dev
+- 
+### Frontend
+- Navigate to the frontend directory:
+
+ cd frontend
+- Install dependencies:
+
+ npm install
+ 
+- Start the development server:
+
+npm run dev
+
+- The frontend development server will be running at http://localhost:5173/.
+
+Usage
+Open your browser and go to http://localhost:3000 to access the Todo app.
