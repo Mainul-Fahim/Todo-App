@@ -69,11 +69,13 @@ npm run dev
 Usage
 Open your browser and go to http://localhost:5173/ to access the Todo app.
 
+### Api Documentation
+
 ## Endpoints
 
 ### 1. Get All Todos
 
-- **Endpoint:** `GET /todos`
+- **Endpoint:** `GET /api/todos`
 - **Description:** Get a list of all todos.
 - **Response:**
   ```json
@@ -89,3 +91,80 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
       // ...more todos
     ]
   }
+  
+### 2. Get Todo by ID
+
+- **Endpoint:** `GET /api/todos/:id`
+- **Description:** Get details of a specific todo by ID.
+- **Response:**
+  ```json
+  {
+  "success": true,
+  "message": "Todo retrieved successfully",
+  "data": {
+    "id": "1",
+    "title": "Sample Todo",
+    "description": "This is a sample task."
+  }
+}
+
+### 3. Create Todo
+
+- **Endpoint:** `POST /api/todos`
+- **Description:** Create a new todo.
+- **Request:**
+  ```json
+{
+  "title": "New Todo",
+  "description": "This is a new task."
+}
+- **Response:**
+  ```json
+  {
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "id": "2",
+    "title": "New Todo",
+    "description": "This is a new task."
+  }
+}
+
+### 3. Update Todo by ID
+
+- **Endpoint:** `PUT /api/todos/:id`
+- **Description:** Update details of a specific todo by ID.
+- **Request:**
+  ```json
+{
+  "title": "Updated Todo",
+  "description": "This task has been updated."
+}
+
+- **Response:**
+  ```json
+  {
+  "success": true,
+  "message": "Todo updated successfully",
+  "data": {
+    "id": "2",
+    "title": "Updated Todo",
+    "description": "This task has been updated."
+  }
+}
+
+
+
+### 5. Delete Todo by ID
+
+- **Endpoint:** `DELETE /api/todos/:id`
+- **Description:**  Delete a specific todo by ID.
+- **Response:**
+  ```json
+  {
+  "success": true,
+  "message": "Todo deleted successfully",
+  "data": null
+}
+
+
