@@ -117,7 +117,7 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
   {
   "title": "New Todo",
   "description": "This is a new task."
-}
+  }
 
 - **Response:**
   ```json
@@ -129,7 +129,7 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
     "title": "New Todo",
     "description": "This is a new task."
   }
-}
+  }
 
 ### 3. Update Todo by ID
 
@@ -140,7 +140,7 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
   {
   "title": "Updated Todo",
   "description": "This task has been updated."
-}
+  }
 
 - **Response:**
   ```json
@@ -152,7 +152,7 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
     "title": "Updated Todo",
     "description": "This task has been updated."
   }
-}
+  }
 
 
 
@@ -166,6 +166,6 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
   "success": true,
   "message": "Todo deleted successfully",
   "data": null
-}
+  }
 
 
