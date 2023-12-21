@@ -42,8 +42,15 @@ Before you begin, ensure you have met the following requirements:
    git clone <repository-url>
    cd backend
    
-2. npm install
+2. 
+ ```bash
+  npm install
 
-3. create env file 
+3. create env file
 
-4. npm run start:dev
+```bash
+  Inside env file, write port
+
+5.
+ ```bash
+npm run start:dev
