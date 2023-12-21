@@ -12,8 +12,6 @@ A simple Todo application with a frontend and backend.
   - [Frontend](#frontend)
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -47,10 +45,12 @@ Before you begin, ensure you have met the following requirements:
 
 3. Create env file
 
- - Create a .env file and configure your environment variables (e.g., PORT).
+ - Create a .env file and configure your environment variables (e.g., PORT=5000).
+ - write PORT=5000 exactly 
 
 5. Start the server
 - npm run start:dev
+- http://localhost:5000 this will be the server
 - 
 ### Frontend
 - Navigate to the frontend directory:
@@ -67,4 +67,25 @@ npm run dev
 - The frontend development server will be running at http://localhost:5173/.
 
 Usage
-Open your browser and go to http://localhost:3000 to access the Todo app.
+Open your browser and go to http://localhost:5173/ to access the Todo app.
+
+## Endpoints
+
+### 1. Get All Todos
+
+- **Endpoint:** `GET /todos`
+- **Description:** Get a list of all todos.
+- **Response:**
+  ```json
+  {
+    "success": true,
+    "message": "Todos retrieved successfully",
+    "data": [
+      {
+        "id": "1",
+        "title": "Sample Todo",
+        "description": "This is a sample task."
+      },
+      // ...more todos
+    ]
+  }
