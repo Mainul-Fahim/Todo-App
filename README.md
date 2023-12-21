@@ -114,10 +114,11 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
 - **Description:** Create a new todo.
 - **Request:**
   ```json
-{
+  {
   "title": "New Todo",
   "description": "This is a new task."
 }
+
 - **Response:**
   ```json
   {
@@ -136,7 +137,7 @@ Open your browser and go to http://localhost:5173/ to access the Todo app.
 - **Description:** Update details of a specific todo by ID.
 - **Request:**
   ```json
-{
+  {
   "title": "Updated Todo",
   "description": "This task has been updated."
 }
