@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import TodoList from "./pages/TodoList"
 import Todo from "./pages/Todo"
-import AddTodo from "./components/AddTodo"
-import EditTodo from "./components/EditTodo"
+import AddTodo from "./components/todos/AddTodo"
+import EditTodo from "./components/todos/EditTodo"
 import Header from "./components/layout/Header"
 
 

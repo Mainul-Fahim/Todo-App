@@ -3,3 +3,9 @@ export interface ITodo {
     title: string;
     description: string;
   }
+
+  export interface ITodoData {
+    data: ITodo[] | undefined;
+    message: string;
+    success: boolean;
+  }

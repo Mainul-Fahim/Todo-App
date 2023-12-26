@@ -1,30 +1,27 @@
-import { useQuery } from "react-query";
-import Button from "../components/Button";
-import { fetchTodos } from "../api/Todos";
-import TodoListItem from "../components/TodoListItem";
+import Button from "../components/common/Button";
+import TodoListItem from "../components/todos/TodoListItem";
 import { useNavigate } from "react-router-dom";
 import { ITodo } from "../interface/interface";
+import useTodo from "../hooks/useTodo";
 
 const TodoList: React.FC = () => {
 
     const navigate = useNavigate();
-    const { data, isLoading, error } = useQuery('todos', fetchTodos);
-    console.log(data, error)
-
+ 
+    const { todos,isLoading} = useTodo();
+    
     if (isLoading) {
         return <div>Loading...</div>;
     }
-
-
 
     return (
         <div className="mx-auto max-w-md">
           
             <ul>
-                {data?.data.map((todo: ITodo) => (
-                    <>
+                {todos?.data?.map((todo: ITodo) => (
+                    <div key={todo?.id}>
                         <TodoListItem todo={todo} />
-                    </>
+                    </div>
                 ))}
             </ul>
             <Button

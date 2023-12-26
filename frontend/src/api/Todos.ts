@@ -22,12 +22,13 @@ export async function fetchTodos() {
   }
   
   export async function updateTodo(updatedTodo:ITodo) {
-    const response = await fetch(`http://localhost:5000/api/todos/${updatedTodo?.id}`, {
+    const  {id,...updatedData} = updatedTodo
+    const response = await fetch(`http://localhost:5000/api/todos/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(updatedTodo)
+    body: JSON.stringify(updatedData)
   });
   return response.json()
   }
