@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-
+import '../tailwind.config'
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },

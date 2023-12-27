@@ -66,6 +66,12 @@ npm run dev
 
 - The frontend development server will be running at http://localhost:5173/.
 
+## Running test and storybook
+
+- npm run storybook
+
+- nom run test
+
 Usage
 Open your browser and go to http://localhost:5173/ to access the Todo app.
 

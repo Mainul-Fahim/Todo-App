@@ -5,7 +5,7 @@ import { ITodo } from '../../interface/interface';
 import useTodo from '../../hooks/useTodo';
 
 
-interface TodoListItemProps {
+export interface TodoListItemProps {
   todo: ITodo;
   onView?: () => void;
   onEdit?: () => void;
@@ -22,7 +22,7 @@ const TodoListItem: React.FC<TodoListItemProps> = ({ todo }) => {
     <li className="border p-4 my-2 rounded-md flex justify-between items-center">
       <div>
         <h2 className="text-lg font-bold">{todo?.title}</h2>
-        <p className="text-gray-600">{todo?.description?.substring(0,50) + "..."}</p>
+        <p className="text-gray-600 text-balance">{todo?.description?.substring(0,50) + "..."}</p>
       </div>
       <div className="flex space-x-2">
         <Button

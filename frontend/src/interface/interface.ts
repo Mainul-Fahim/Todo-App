@@ -9,3 +9,8 @@ export interface ITodo {
     message: string;
     success: boolean;
   }
+
+  export interface FormData {
+    title: string;
+    description: string;
+  }

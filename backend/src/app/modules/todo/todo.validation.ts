@@ -4,7 +4,7 @@ import Joi from "joi";
 export const todoValidationSchema = Joi.object({
     title: Joi.string()
         .min(3)
-        .max(30)
+        .max(50)
         .required(),
         description: Joi.string()
         .required(),

@@ -1,10 +1,8 @@
 import React from 'react';
-import { Resolver, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import { resolver } from '../../utils/FormValidation';
+import { FormData } from '../../interface/interface';
 
-interface FormData {
-  title: string;
-  description: string;
-}
 
 interface FormDataProps {
   initialValue?: FormData;
@@ -12,43 +10,6 @@ interface FormDataProps {
   onSubmit: (todo: FormData) => void;
 }
 
-const resolver: Resolver<FormData> = async (values) => {
-
-  const isValid = values.title && values.description && values.title.length >= 3 &&
-    values.title.length <= 30;
-
-  return {
-    values: isValid ? values : {},
-    errors: !isValid
-      ? {
-        title: {
-          type: 'required',
-          message: ' is required.',
-          ...(!values.title || values.title.length < 3
-            ? {
-              minLength: {
-                value: 3,
-                message: 'Must be at least 3 characters long.',
-              },
-            }
-            : {}),
-          ...(values.title && values.title.length > 50
-            ? {
-              maxLength: {
-                value: 50,
-                message: 'Must be 50 characters or less.',
-              },
-            }
-            : {}),
-        },
-        description: {
-          type: 'required',
-          message: ' is required.',
-        },
-      }
-      : {},
-  };
-};
 
 const Form: React.FC<FormDataProps> = ({ type, onSubmit, initialValue }) => {
 
@@ -74,10 +35,10 @@ const Form: React.FC<FormDataProps> = ({ type, onSubmit, initialValue }) => {
           {errors?.title && <span className="text-red-800">{errors?.title?.message}</span>}
         </label>
         <input
-          {...register('title', { required: true, maxLength: 15, minLength: 3 })}
+          {...register('title', { required: true, maxLength: 50, minLength: 3 })}
           id="title"
           type="text"
-          maxLength={30}
+          maxLength={50}
           className="mt-1 p-2 w-full border rounded-md"
           defaultValue={initialValue?.title}
         />
